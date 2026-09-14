@@ -5,5 +5,5 @@ var alturaTexto = sprite_height;
 var espacioEntreTextos = alturaTexto / 4;
 var diferenciaY = (alturaTexto + espacioEntreTextos) + 50;
 var anchoTexto = sprite_width;
-draw_text(x - anchoTexto, y - diferenciaY, "x: " + string(x) + ", y: " + string(y));
+draw_text(x - anchoTexto, y - diferenciaY, "x: " + string(x) + ", y: " + string(y) + "\nc: " + string(contadorTransformacion));
 //draw_circle(x, y, 5, false);
