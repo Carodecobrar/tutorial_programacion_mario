@@ -1,0 +1,15 @@
+velocidadHorizontal = 0;
+velocidadVertical = 0;
+gravedad = 0.2;
+direccion = 0;
+aceleracion = 1;
+velocidadSalto = 5;
+sprite = spr_Mario;
+mask_index = spr_jugador;
+image_xscale = 1;
+image_yscale = 1;
+image_speed = .5;
+flechaIzquierda = noone;
+teclaSalto = noone;
+jugadorTocandoElSuelo = false;
+jugadorEstaTocandoUnaPared = false;

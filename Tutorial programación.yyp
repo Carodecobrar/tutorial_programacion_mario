@@ -1,0 +1,40 @@
+{
+  "$GMProject":"v1",
+  "%Name":"Tutorial programación",
+  "AudioGroups":[
+    {"$GMAudioGroup":"v1","%Name":"audiogroup_default","exportDir":"","name":"audiogroup_default","resourceType":"GMAudioGroup","resourceVersion":"2.0","targets":-1,},
+  ],
+  "configs":{
+    "children":[],
+    "name":"Default",
+  },
+  "defaultScriptType":1,
+  "Folders":[],
+  "ForcedPrefabProjectReferences":[],
+  "IncludedFiles":[],
+  "isEcma":false,
+  "LibraryEmitters":[],
+  "MetaData":{
+    "IDEVersion":"2026.0.0.16",
+  },
+  "name":"Tutorial programación",
+  "resources":[
+    {"id":{"name":"obj_jugador","path":"objects/obj_jugador/obj_jugador.yy",},},
+    {"id":{"name":"obj_suelo","path":"objects/obj_suelo/obj_suelo.yy",},},
+    {"id":{"name":"nivel_1","path":"rooms/nivel_1/nivel_1.yy",},},
+    {"id":{"name":"spr_jugador","path":"sprites/spr_jugador/spr_jugador.yy",},},
+    {"id":{"name":"spr_Mario_Caminando","path":"sprites/spr_Mario_Caminando/spr_Mario_Caminando.yy",},},
+    {"id":{"name":"spr_Mario_Saltando","path":"sprites/spr_Mario_Saltando/spr_Mario_Saltando.yy",},},
+    {"id":{"name":"spr_Mario","path":"sprites/spr_Mario/spr_Mario.yy",},},
+    {"id":{"name":"spr_suelo","path":"sprites/spr_suelo/spr_suelo.yy",},},
+  ],
+  "resourceType":"GMProject",
+  "resourceVersion":"2.0",
+  "RoomOrderNodes":[
+    {"roomId":{"name":"nivel_1","path":"rooms/nivel_1/nivel_1.yy",},},
+  ],
+  "templateType":"game",
+  "TextureGroups":[
+    {"$GMTextureGroup":"","%Name":"Default","autocrop":true,"border":2,"compressFormat":"bz2","customOptions":"","directory":"","groupParent":null,"isScaled":true,"loadType":"default","mipsToGenerate":0,"name":"Default","resourceType":"GMTextureGroup","resourceVersion":"2.0","targets":-1,},
+  ],
+}
