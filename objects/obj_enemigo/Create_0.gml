@@ -15,3 +15,4 @@ spriteAplastado = noone;
 contadorAplastado = 0;
 maxContadorAplastado = 0;
 estado = Estados.Moverse;
+aceleracionMientrasAplastado = 0;

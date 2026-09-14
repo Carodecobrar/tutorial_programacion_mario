@@ -45,39 +45,7 @@ function scr_EstadosJugador(){
 						break;
 				}
 			} else if (enemigoQueEstaTocando != noone && enemigoQueEstaTocando.estado != Estados.Muerto) {
-				switch(enemigoQueEstaTocando.nombre) {
-					case Nombres.Goomba:
-						var jugadorY = round(y),
-							enemigoY = round(enemigoQueEstaTocando.y),
-							colisionDeLado = jugadorY == enemigoY,
-							colisionPorArriba = jugadorY < enemigoY,
-							colisionPorAbajo = jugadorY > enemigoY;
-						//De grande a chiquito
-						if ((colisionDeLado || colisionPorAbajo) && faseMario == FasesMario.SuperMario) {
-							faseMario = FasesMario.Mario;
-							sprite = spr_Mario;
-							maxContadorTransformacion = 7;
-							estadoTemporalMario = FasesMario.Mario;
-							velocidadVerticalTemporal = velocidadVertical;
-							estado = Estados.Transformar;
-						}
-						//Aplastar
-						else if (colisionPorArriba) {
-							//Aplastar hongo
-							with (enemigoQueEstaTocando) {
-								estado = Estados.Muerto;
-								tipoDeMuerte = TiposDeMuerte.Aplastado;
-							}
-							//Saltar
-							velocidadVertical = 0;
-							velocidadVertical -= velocidadSaltoAlAplastar;
-						}
-						//Muerte porque es chiquito
-						else if ((colisionDeLado || colisionPorAbajo) && faseMario == FasesMario.Mario) {
-							estado = Estados.Muerto;
-						}
-						break;
-				}
+				scr_ColisionarConEnemigos(enemigoQueEstaTocando);
 			}
 			scr_AnimacionesJugador();
 			break;

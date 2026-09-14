@@ -2,7 +2,8 @@ enum Estados {
 	Moverse,
 	Transformar,
 	Disparar,
-	Muerto
+	Muerto,
+	Aplastado
 }
 enum FasesMario {
 	Mario,
@@ -14,7 +15,8 @@ enum Nombres {
 	Hongo,
 	Flor,
 	Estrella,
-	Goomba
+	Goomba,
+	KoopaTroopa
 }
 enum TiposDeMuerte {
 	Aplastado,
