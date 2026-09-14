@@ -23,3 +23,4 @@ contadorTransformacion = 0;
 maxContadorTransformacion = 0;
 estadoTemporalMario = noone;
 velocidadVerticalTemporal = 0;
+velocidadSaltoAlAplastar = 3;

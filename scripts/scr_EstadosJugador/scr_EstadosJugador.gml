@@ -68,6 +68,9 @@ function scr_EstadosJugador(){
 								estado = Estados.Muerto;
 								tipoDeMuerte = TiposDeMuerte.Aplastado;
 							}
+							//Saltar
+							velocidadVertical = 0;
+							velocidadVertical -= velocidadSaltoAlAplastar;
 						}
 						//Muerte porque es chiquito
 						else if ((colisionDeLado || colisionPorAbajo) && faseMario == FasesMario.Mario) {
