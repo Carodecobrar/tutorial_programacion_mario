@@ -8,6 +8,11 @@ function scr_AnimacionesJugador() {
 			spriteCaminando = spr_SuperMario_Caminando;
 			spriteSaltando = spr_SuperMario_Saltando;
 			break;
+		case FasesMario.FuegoMario:
+			spriteQuieto = spr_SuperMarioFuego;
+			spriteCaminando = spr_SuperMarioFuego_Caminando;
+			spriteSaltando = spr_SuperMarioFuego_Saltando;
+			break;
 	}
 	if (direccion == 0) {
 		sprite = spriteQuieto;

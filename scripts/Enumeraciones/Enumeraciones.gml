@@ -10,3 +10,8 @@ enum FasesMario {
 	FuegoMario,
 	EstrellaMario
 }
+enum Nombres {
+	Hongo,
+	Flor,
+	Estrella
+}
