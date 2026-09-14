@@ -13,5 +13,6 @@ enum FasesMario {
 enum Nombres {
 	Hongo,
 	Flor,
-	Estrella
+	Estrella,
+	Goomba
 }

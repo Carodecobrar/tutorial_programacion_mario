@@ -25,6 +25,7 @@
   "name":"Tutorial programación",
   "resources":[
     {"id":{"name":"obj_control","path":"objects/obj_control/obj_control.yy",},},
+    {"id":{"name":"obj_enemigo","path":"objects/obj_enemigo/obj_enemigo.yy",},},
     {"id":{"name":"obj_item","path":"objects/obj_item/obj_item.yy",},},
     {"id":{"name":"obj_jugador","path":"objects/obj_jugador/obj_jugador.yy",},},
     {"id":{"name":"obj_suelo","path":"objects/obj_suelo/obj_suelo.yy",},},
@@ -35,6 +36,7 @@
     {"id":{"name":"scr_MovimientoJugador","path":"scripts/scr_MovimientoJugador/scr_MovimientoJugador.yy",},},
     {"id":{"name":"Sound1","path":"sounds/Sound1/Sound1.yy",},},
     {"id":{"name":"spr_Flor","path":"sprites/spr_Flor/spr_Flor.yy",},},
+    {"id":{"name":"spr_Goomba","path":"sprites/spr_Goomba/spr_Goomba.yy",},},
     {"id":{"name":"spr_Hongo","path":"sprites/spr_Hongo/spr_Hongo.yy",},},
     {"id":{"name":"spr_jugador","path":"sprites/spr_jugador/spr_jugador.yy",},},
     {"id":{"name":"spr_Mario_Caminando","path":"sprites/spr_Mario_Caminando/spr_Mario_Caminando.yy",},},

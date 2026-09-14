@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"Sound1",
   "parent":{
-    "name":"Tutorial programación",
-    "path":"Tutorial programación.yyp",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

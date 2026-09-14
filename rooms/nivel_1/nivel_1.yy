@@ -545,8 +545,8 @@
   ],
   "name":"nivel_1",
   "parent":{
-    "name":"Tutorial programación",
-    "path":"Tutorial programación.yyp",
+    "name":"Rooms",
+    "path":"folders/Rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

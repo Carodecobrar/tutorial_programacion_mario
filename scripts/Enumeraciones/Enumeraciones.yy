@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"Enumeraciones",
   "parent":{
-    "name":"Tutorial programación",
-    "path":"Tutorial programación.yyp",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

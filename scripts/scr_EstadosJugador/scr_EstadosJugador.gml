@@ -3,7 +3,8 @@ function scr_EstadosJugador(){
 		case Estados.Moverse:
 			scr_MovimientoJugador();
 			//Transformarse segun items
-			var itemQueEstaTocando = instance_place(x, y, obj_item);
+			var itemQueEstaTocando = instance_place(x, y, obj_item),
+				enemigoQueEstaTocando = instance_place(x+(aceleracion*direccion), y, obj_enemigo);
 			if (itemQueEstaTocando != noone) {
 				switch(itemQueEstaTocando.nombre) {
 					case Nombres.Hongo:
@@ -28,6 +29,20 @@ function scr_EstadosJugador(){
 							with (itemQueEstaTocando) {
 								instance_destroy();
 							}
+							estado = Estados.Transformar;
+						}
+						break;
+				}
+			} else if (enemigoQueEstaTocando != noone) {
+				switch(enemigoQueEstaTocando.nombre) {
+					case Nombres.Goomba:
+						//De grande a chiquito
+						if (faseMario == FasesMario.SuperMario) {
+							faseMario = FasesMario.Mario;
+							sprite = spr_Mario;
+							maxContadorTransformacion = 7;
+							estadoTemporalMario = FasesMario.Mario;
+							velocidadVerticalTemporal = velocidadVertical;
 							estado = Estados.Transformar;
 						}
 						break;

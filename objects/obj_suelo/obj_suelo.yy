@@ -6,8 +6,8 @@
   "name":"obj_suelo",
   "overriddenProperties":[],
   "parent":{
-    "name":"Tutorial programación",
-    "path":"Tutorial programación.yyp",
+    "name":"Objects",
+    "path":"folders/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
