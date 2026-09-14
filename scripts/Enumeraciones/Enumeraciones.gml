@@ -16,7 +16,9 @@ enum Nombres {
 	Flor,
 	Estrella,
 	Goomba,
-	KoopaTroopa
+	KoopaTroopa,
+	BolaDeFuego,
+	Explosion
 }
 enum TiposDeMuerte {
 	Aplastado,

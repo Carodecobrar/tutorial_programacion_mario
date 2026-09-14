@@ -2,6 +2,20 @@ function scr_EstadosJugador(){
 	switch(estado){
 		case Estados.Moverse:
 			scr_MovimientoJugador();
+			if (faseMario == FasesMario.FuegoMario && disparando == false && teclaDisparo && numeroDeDisparos < maxNumeroDeDisparos) {
+				var bolaDeFuego = instance_create_layer(x + (4*direccion), y - 16, "Proyectiles", obj_efecto);
+				bolaDeFuego.nombre = Nombres.BolaDeFuego;
+				bolaDeFuego.direccion = image_xscale;
+				bolaDeFuego.image_xscale = image_xscale;
+				numeroDeDisparos++;
+				disparando = true;
+			}
+			if (numeroDeDisparos >= maxNumeroDeDisparos && temporizadorDisparos < maxTemporizadorDisparos) {
+				temporizadorDisparos++;
+			} else if (temporizadorDisparos >= maxTemporizadorDisparos) {
+				numeroDeDisparos = 0;
+				temporizadorDisparos = 0;
+			}
 			//Transformarse segun items
 			var itemQueEstaTocando = instance_place(x, y, obj_item),
 				enemigoQueEstaTocando = instance_place(x, y, obj_enemigo);

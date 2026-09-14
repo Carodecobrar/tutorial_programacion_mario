@@ -23,4 +23,15 @@ function scr_AnimacionesJugador() {
 	if (!jugadorTocandoElSuelo) {
 		sprite = spriteSaltando;
 	}
+	if (estado == Estados.Moverse && disparando) {
+		sprite = spr_SuperMarioFuego_Disparando;
+		image_speed = 0;
+		if (contadorDisparando < maxContadorDisparando) {
+			contadorDisparando++;
+		} else {
+			image_speed = .25;
+			disparando = false;
+			contadorDisparando = 0;
+		}
+	}
 }

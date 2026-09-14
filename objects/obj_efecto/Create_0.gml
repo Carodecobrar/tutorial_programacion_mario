@@ -1,0 +1,16 @@
+nombre = noone;
+velocidadHorizontal = 0;
+velocidadVertical = 0;
+velocidadSalto = 0;
+aceleracion = 0;
+gravedad = 0.2;
+sprite = noone;
+direccion = 0;
+puedeMoverse = false;
+puedeTocarParedes = false;
+itemTocandoElSuelo = false;
+itemEstaTocandoUnaPared = false;
+destruirseAlTocarParedes = false;
+destruirseAlTocarEnemigos = false;
+saltarAlTocarElSuelo = true;
+destruirse = false;
