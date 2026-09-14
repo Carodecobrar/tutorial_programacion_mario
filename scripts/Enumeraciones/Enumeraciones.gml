@@ -16,3 +16,7 @@ enum Nombres {
 	Estrella,
 	Goomba
 }
+enum TiposDeMuerte {
+	Aplastado,
+	Arrojado
+}

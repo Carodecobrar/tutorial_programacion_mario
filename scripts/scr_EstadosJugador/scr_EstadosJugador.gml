@@ -4,7 +4,7 @@ function scr_EstadosJugador(){
 			scr_MovimientoJugador();
 			//Transformarse segun items
 			var itemQueEstaTocando = instance_place(x, y, obj_item),
-				enemigoQueEstaTocando = instance_place(x+(aceleracion*direccion), y, obj_enemigo);
+				enemigoQueEstaTocando = instance_place(x, y, obj_enemigo);
 			if (itemQueEstaTocando != noone) {
 				switch(itemQueEstaTocando.nombre) {
 					case Nombres.Hongo:
@@ -21,8 +21,19 @@ function scr_EstadosJugador(){
 						}
 						break;
 					case Nombres.Flor:
+						//De chiquito a grande
+						if (faseMario == FasesMario.Mario) {
+							sprite = spr_Mario;
+							maxContadorTransformacion = 7;
+							estadoTemporalMario = FasesMario.SuperMario;
+							velocidadVerticalTemporal = velocidadVertical;
+							with (itemQueEstaTocando) {
+								instance_destroy();
+							}
+							estado = Estados.Transformar;
+						}
 						//De grande a fuego
-						if (faseMario == FasesMario.SuperMario) {
+						else if (faseMario == FasesMario.SuperMario) {
 							sprite = spr_Mario;
 							estadoTemporalMario = FasesMario.FuegoMario;
 							velocidadVerticalTemporal = velocidadVertical;
@@ -33,17 +44,34 @@ function scr_EstadosJugador(){
 						}
 						break;
 				}
-			} else if (enemigoQueEstaTocando != noone) {
+			} else if (enemigoQueEstaTocando != noone && enemigoQueEstaTocando.estado != Estados.Muerto) {
 				switch(enemigoQueEstaTocando.nombre) {
 					case Nombres.Goomba:
+						var jugadorY = round(y),
+							enemigoY = round(enemigoQueEstaTocando.y),
+							colisionDeLado = jugadorY == enemigoY,
+							colisionPorArriba = jugadorY < enemigoY,
+							colisionPorAbajo = jugadorY > enemigoY;
 						//De grande a chiquito
-						if (faseMario == FasesMario.SuperMario) {
+						if ((colisionDeLado || colisionPorAbajo) && faseMario == FasesMario.SuperMario) {
 							faseMario = FasesMario.Mario;
 							sprite = spr_Mario;
 							maxContadorTransformacion = 7;
 							estadoTemporalMario = FasesMario.Mario;
 							velocidadVerticalTemporal = velocidadVertical;
 							estado = Estados.Transformar;
+						}
+						//Aplastar
+						else if (colisionPorArriba) {
+							//Aplastar hongo
+							with (enemigoQueEstaTocando) {
+								estado = Estados.Muerto;
+								tipoDeMuerte = TiposDeMuerte.Aplastado;
+							}
+						}
+						//Muerte porque es chiquito
+						else if ((colisionDeLado || colisionPorAbajo) && faseMario == FasesMario.Mario) {
+							estado = Estados.Muerto;
 						}
 						break;
 				}
@@ -150,6 +178,11 @@ function scr_EstadosJugador(){
 					estado = Estados.Moverse;
 					break;
 			}
+			break;
+		case Estados.Muerto:
+			sprite = spr_Mario_Muerto;
+			velocidadHorizontal = 0;
+			velocidadVertical = 0;
 			break;
 	}
 }
