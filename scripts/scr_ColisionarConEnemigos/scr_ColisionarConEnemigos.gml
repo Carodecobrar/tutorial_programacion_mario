@@ -27,7 +27,8 @@ function scr_ColisionarConEnemigos(enemigoQueEstaTocando){
 		case Nombres.KoopaTroopa:
 			//De grande a chiquito
 			if ((colisionDeLado || colisionPorAbajo)) {
-				if (colisionDeLado && enemigoQueEstaTocando.estado == Estados.Aplastado && jugadorTocandoElSuelo) {
+				var enemigoSePuedePatear = enemigoQueEstaTocando.estado == Estados.Aplastado && enemigoQueEstaTocando.puedeMoverse == false;
+				if (colisionDeLado && enemigoSePuedePatear && jugadorTocandoElSuelo) {
 					//Patear tortuga
 					PatearEnemigo(enemigoQueEstaTocando);
 				} else {
@@ -46,10 +47,6 @@ function scr_ColisionarConEnemigos(enemigoQueEstaTocando){
 				}
 				SaltarAlAplastar(enemigoQueEstaTocando);
 			}
-			//Muerte porque es chiquito
-			//else if ((colisionDeLado || colisionPorAbajo) && faseMario == FasesMario.Mario) {
-			//	estado = Estados.Muerto;
-			//}
 			break;
 	}
 }
